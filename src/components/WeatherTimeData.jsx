@@ -41,13 +41,14 @@ const WeatherTimeData = () => {
                                         <h5 className='card-title'>Ahora</h5>
                                         <hr />
                                         <h5 className='card-title'>{currentWeather.city_name}, {currentWeather.country_code}</h5>
-                                        <p className='card-text'>Temperatura : {currentWeather.temp}°C</p>
-                                        <p className='card-text'>Sensación terminca : {currentWeather.app_temp}°C</p>
-                                        <p className='card-text'>Humedad : {currentWeather.rh}%</p>
-                                        <p className='card-text'>Probabilidad de lluvia : {currentWeather.precip}%</p>
-                                        <p className='card-text'>Descripción : {currentWeather.weather.description}</p>
-                                        <p className='card-text'>Amencer : {currentWeather.sunrise}</p>
-                                        <p className='card-text'>Atardecer : {currentWeather.sunset}</p>
+                                        <img src={`https://cdn.weatherbit.io/static/img/icons/${currentWeather.weather.icon}.png`} alt="" />
+                                        <h3 className='card-title'>{currentWeather.temp}°C</h3>
+                                        <h5 className='card-title mb-3'>{currentWeather.weather.description}</h5>
+                                        <p className='fs-5 bi bi-thermometer-half'>Sensación terminca : {currentWeather.app_temp}°C</p>
+                                        <p className='fs-5 bi bi-water'>  Humedad : {currentWeather.rh}%</p>
+                                        <p className='fs-5 bi bi-cloud-rain'>  Probabilidad de lluvia : {currentWeather.precip}%</p>
+                                        <p className='fs-5 bi bi-sunrise'>  Amencer : {currentWeather.sunrise}</p>
+                                        <p className='fs-5 bi bi-sunset'>  Atardecer : {currentWeather.sunset}</p>
                                     </div>
                                 </div>
                             </div>
@@ -69,8 +70,8 @@ const WeatherTimeData = () => {
                                     <div className='card-body'>
                                         <h5 className='card-title'>{forecastWeather.timestamp_local}</h5>
                                         <hr />
-                                        <h5 className='card-title'>Temperatura : {forecastWeather.temp}°C</h5>
-                                        <p className='card-text'>Probabilidad de lluvia : {forecastWeather.precip}%</p>
+                                        <h3 className='card-title'>{forecastWeather.temp}°C</h3>
+                                        <p className='fs-5 bi bi-cloud-rain'>  Probabilidad de lluvia : {forecastWeather.precip}%</p>
                                     </div>
                                 </div>
                             </div>
